@@ -10,8 +10,6 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
-  const featuredProjects = softwareProjects.filter((project) => project.featured);
-  const supportingProjects = softwareProjects.filter((project) => !project.featured);
 
   return (
     <section id="projects" className="section-shell relative">
@@ -27,17 +25,9 @@ export function ProjectsSection() {
       </div>
 
       <div className="mt-2 grid gap-5 xl:grid-cols-2">
-        {featuredProjects.map((project, index) => (
+        {softwareProjects.map((project, index) => (
           <Reveal delay={0.08 * index} key={project.id}>
             <ProjectCard project={project} onViewDetails={setSelectedProject} />
-          </Reveal>
-        ))}
-      </div>
-
-      <div className="mt-5 grid gap-5 lg:grid-cols-3">
-        {supportingProjects.map((project, index) => (
-          <Reveal delay={0.14 + index * 0.08} key={project.id}>
-            <ProjectCard compact project={project} onViewDetails={setSelectedProject} />
           </Reveal>
         ))}
       </div>

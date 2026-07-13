@@ -4,7 +4,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 export function ProjectCard({ project, compact = false, onViewDetails }: { project: SoftwareProject; compact?: boolean; onViewDetails: (project: SoftwareProject) => void }) {
   return (
     <GlassCard className="project-card group h-full overflow-hidden p-0">
-      <div className={compact ? "project-demo h-40 border-b border-white/10 bg-[radial-gradient(circle_at_30%_20%,rgba(155,124,255,0.22),transparent_36%),linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.025))] p-5" : "project-demo relative min-h-64 border-b border-white/10 bg-[radial-gradient(circle_at_25%_20%,rgba(124,247,255,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.13),rgba(255,255,255,0.025))] p-5"}>
+      <div className={compact ? "project-demo h-56 border-b border-white/10 bg-[radial-gradient(circle_at_30%_20%,rgba(155,124,255,0.22),transparent_36%),linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.025))] p-5" : "project-demo relative min-h-80 border-b border-white/10 bg-[radial-gradient(circle_at_25%_20%,rgba(124,247,255,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.13),rgba(255,255,255,0.025))] p-5"}>
         <div className="flex items-center justify-between gap-4 font-mono text-xs uppercase tracking-[0.2em]">
           <span className="rounded-full border border-white/15 bg-ink/55 px-3 py-1 text-neon backdrop-blur">{project.index} / {project.featured ? "Featured" : "System"}</span>
           <span className="text-white/45">{project.year}</span>

@@ -42,7 +42,7 @@ export function SocialSection() {
         <Reveal delay={0.24}>
           <div className="grid gap-3 md:grid-cols-2">
             {socialLinks.map((link) => (
-              <a className="rounded-[1.5rem] border border-white/10 bg-white/[0.045] p-4 transition hover:-translate-y-1 hover:border-neon/40 hover:bg-white/[0.07]" href={link.href} key={link.label}>
+              <a className="social-link-card rounded-[1.5rem] border border-white/10 bg-white/[0.045] p-4 transition hover:-translate-y-1 hover:border-neon/40 hover:bg-white/[0.07]" href={link.href} key={link.label}>
                 <p className="text-xl font-black text-white">{link.label}</p>
                 <p className="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-neon">{link.handle}</p>
                 <p className="mt-3 text-sm leading-6 text-white/58">{link.description}</p>

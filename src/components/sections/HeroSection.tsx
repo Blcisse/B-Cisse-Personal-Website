@@ -12,6 +12,12 @@ const reveal = {
   visible: { opacity: 1, y: 0, filter: "blur(0px)" },
 };
 
+const langTicker = [
+  "Python", "JavaScript", "TypeScript", "SQL", "React", "Next.js",
+  "Node.js", "FastAPI", "Docker", "GCP", "Tailwind", "Framer Motion",
+  "PostgreSQL", "LangChain",
+];
+
 export function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
   const mouseX = useMotionValue(0);
@@ -32,14 +38,14 @@ export function HeroSection() {
     <section id="hero" className="section-shell relative flex min-h-screen items-center overflow-hidden pt-32" onPointerMove={handlePointerMove}>
       <motion.div
         animate="visible"
-        className="relative grid min-h-[calc(100vh-9rem)] w-full items-center gap-8 lg:grid-cols-[0.85fr_1.18fr_0.85fr]"
+        className="relative grid min-h-[calc(100vh-9rem)] w-full items-center gap-8 lg:grid-cols-3"
         initial="hidden"
         transition={{ staggerChildren: shouldReduceMotion ? 0 : 0.1 }}
       >
         <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-neon/15" style={{ x: ringX, y: ringY }} />
         <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10" style={{ x: ringY, y: ringX }} />
 
-        <div className="order-2 z-10 lg:order-1 lg:self-end lg:pb-14">
+        <div className="order-2 z-10 lg:order-1 lg:self-end lg:pb-6">
           <motion.p className="technical-kicker" variants={reveal}>00.01 / B PRSNL Interface</motion.p>
           <motion.h1 className="mt-4 text-5xl font-black leading-[0.88] tracking-tight text-white sm:text-6xl lg:text-7xl" variants={reveal}>
             {profile.name}
@@ -68,7 +74,7 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        <div className="order-3 z-10 lg:self-start lg:pt-24">
+        <div className="order-3 z-10 lg:self-start lg:pt-12">
           <motion.p className="technical-kicker" variants={reveal}>— Core role</motion.p>
           <motion.h2 className="mt-4 text-3xl font-black leading-tight text-white md:text-5xl" variants={reveal}>{profile.title}</motion.h2>
           <motion.p className="mt-4 text-lg leading-8 text-neon" variants={reveal}>{profile.specialty}</motion.p>
@@ -79,6 +85,18 @@ export function HeroSection() {
             <MagneticButton href={profile.resumeUrl} icon={<Download size={17} />}>Resume / Download Resume</MagneticButton>
           </motion.div>
         </div>
+        {/* Language ticker — spans full 3-col grid width, anchored below portrait row */}
+        <motion.div className="order-4 col-span-full" variants={reveal}>
+          <div className="liquid-glass relative overflow-hidden rounded-[1.5rem] py-3">
+            <div className="hero-lang-ticker flex w-max gap-3 px-4">
+              {[...langTicker, ...langTicker].map((lang, index) => (
+                <span className="rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 font-mono text-xs uppercase tracking-[0.22em] text-white/75 shadow-glass" key={`${lang}-${index}`}>
+                  {lang}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );

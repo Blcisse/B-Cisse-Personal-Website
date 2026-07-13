@@ -6,10 +6,9 @@ export const profile = {
   specialty: "Data & Intelligent Systems Engineering Specialist",
   location: "New York, NY",
   email: "bl.cisse22@gmail.com",
-  phone: "646-836-9579",
+  phone: "(646) 836-9579",
   website: "ballacisse.com",
-  portrait: "/images/b-cisse-portrait.svg",
-  resumeUrl: "#resume",
+  portrait: "/images/bprsnlwebbyportrait.jpg",
   heroSummary:
     "Building intelligent, scalable, high-performance digital systems across web, mobile, backend, and AI.",
   aboutIntro:
@@ -35,9 +34,9 @@ export const profile = {
     "Have a role, product, website, or intelligent system in mind? Let’s build something sharp, scalable, and useful.",
   contactLinks: [
     { label: "Email", href: "mailto:bl.cisse22@gmail.com", value: "bl.cisse22@gmail.com" },
-    { label: "LinkedIn", href: "#linkedin", value: "LinkedIn Profile" },
-    { label: "GitHub", href: "#github", value: "GitHub Repository" },
-    { label: "Website", href: "https://ballacisse.com", value: "ballacisse.com" },
-    { label: "Resume", href: "#resume", value: "Resume Placeholder" },
+    { label: "Phone", href: "tel:+16468369579", value: "(646) 836-9579" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/ballacisse/", value: "linkedin.com/in/ballacisse" },
+    { label: "GitHub", href: "https://github.com/Blcisse?tab=repositories", value: "github.com/Blcisse" },
+    { label: "Website", href: "https://ballacisse.com/", value: "ballacisse.com" },
   ],
 };

@@ -46,19 +46,12 @@ export function WebsitePortfolioSection() {
                   <video
                     autoPlay
                     className="h-full w-full object-cover"
+                    key={activeProject.videoUrl}
                     loop
                     muted
                     playsInline
-                    src={`/assets/videos/placeholder-website-${activeIndex + 1}.mp4`}
+                    src={activeProject.videoUrl}
                   />
-                </div>
-              </div>
-              <div className="mobile-frame absolute bottom-8 right-7 w-36 rounded-[1.8rem] border border-white/15 bg-ink/80 p-2 shadow-glow backdrop-blur md:w-44">
-                <div className="aspect-[9/16] rounded-[1.3rem] border border-white/10 bg-[linear-gradient(160deg,rgba(124,247,255,0.16),rgba(155,124,255,0.08),rgba(255,107,74,0.12))] p-3">
-                  <p className="font-mono text-[0.58rem] uppercase tracking-[0.18em] text-neon">Mobile</p>
-                  <div className="mt-10 h-2 rounded-full bg-white/20" />
-                  <div className="mt-2 h-2 w-2/3 rounded-full bg-white/10" />
-                  <div className="mt-6 h-16 rounded-2xl border border-white/10 bg-white/10" />
                 </div>
               </div>
             </div>
@@ -85,7 +78,7 @@ export function WebsitePortfolioSection() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <button className="rounded-full bg-white px-4 py-2 text-sm font-black text-black" onClick={() => setSelectedProject(activeProject)} type="button">Case Study</button>
-                <a className="rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 hover:border-neon hover:text-neon" href={activeProject.liveUrl}>Live Placeholder</a>
+                <a className="rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 hover:border-neon hover:text-neon" href={activeProject.liveUrl} rel="noopener noreferrer" target="_blank">View Portfolio</a>
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-4">

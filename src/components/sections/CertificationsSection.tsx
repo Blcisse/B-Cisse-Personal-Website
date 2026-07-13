@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { awards, certifications } from "@/data/certifications";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Reveal } from "@/components/ui/Reveal";
@@ -21,15 +22,20 @@ export function CertificationsSection() {
         {certifications.map((credential, index) => (
           <Reveal delay={0.08 * index} key={credential.id}>
             <GlassCard className="credential-card h-full overflow-hidden p-0">
-              <div className="credential-image relative h-40 border-b border-white/10 bg-[radial-gradient(circle_at_25%_20%,rgba(124,247,255,0.18),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03))]">
+              <div className="credential-image relative h-40 overflow-hidden rounded-[1.4rem] border-b border-white/10 bg-[radial-gradient(circle_at_25%_20%,rgba(124,247,255,0.18),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03))]">
+                <Image
+                  src={credential.image}
+                  alt={`${credential.title} badge`}
+                  fill
+                  className="object-cover"
+                />
                 <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-ink/55 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-neon backdrop-blur">Certificate</div>
-                <div className="absolute bottom-5 left-5 right-5 font-mono text-xs uppercase tracking-[0.22em] text-white/35">Image placeholder / replaceable</div>
               </div>
               <div className="p-6">
                 <p className="technical-kicker">{credential.issuer} / {credential.category}</p>
                 <h3 className="mt-3 text-2xl font-black text-white">{credential.title}</h3>
                 <p className="mt-4 text-sm leading-6 text-white/62">{credential.description}</p>
-                <a className="mt-6 inline-flex rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 transition hover:border-neon hover:text-neon" href={credential.verificationUrl}>Verification placeholder</a>
+                <a className="mt-6 inline-flex rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 transition hover:border-neon hover:text-neon" href={credential.verificationUrl} rel="noopener noreferrer" target="_blank">View Verification</a>
               </div>
             </GlassCard>
           </Reveal>
@@ -48,15 +54,19 @@ export function CertificationsSection() {
         {awards.map((award, index) => (
           <Reveal delay={0.26 + index * 0.08} key={award.id}>
             <GlassCard className="credential-card grid gap-5 p-5 md:grid-cols-[16rem_1fr]">
-              <div className="credential-image min-h-44 rounded-[1.4rem] border border-white/10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,107,74,0.22),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.025))] p-5">
-                <p className="font-mono text-xs uppercase tracking-[0.22em] text-ember">Award</p>
-                <p className="mt-16 font-mono text-xs uppercase tracking-[0.22em] text-white/35">Image placeholder</p>
+              <div className="credential-image relative min-h-44 overflow-hidden rounded-[1.4rem] border border-white/10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,107,74,0.22),transparent_38%),linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.025))]">
+                <Image
+                  src={award.image}
+                  alt={`${award.title} badge`}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-ink/55 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-ember backdrop-blur">Award</div>
               </div>
               <div className="self-center">
                 <p className="technical-kicker">{award.issuer} / {award.category}</p>
                 <h3 className="mt-3 text-3xl font-black text-white">{award.title}</h3>
                 <p className="mt-4 text-base leading-7 text-white/68">{award.description}</p>
-                <a className="mt-6 inline-flex rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 transition hover:border-ember hover:text-ember" href={award.verificationUrl}>Recognition placeholder</a>
               </div>
             </GlassCard>
           </Reveal>

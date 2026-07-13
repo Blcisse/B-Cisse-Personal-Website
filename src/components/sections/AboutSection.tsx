@@ -52,7 +52,7 @@ export function AboutSection() {
       <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {profile.highlights.map((highlight, index) => (
           <Reveal delay={0.08 * index} key={highlight.value}>
-            <GlassCard className="h-full p-5">
+            <GlassCard className="about-stat-card h-full p-5">
               <p className="text-3xl font-black text-white">{highlight.value}</p>
               <p className="mt-3 text-sm leading-6 text-white/62">{highlight.label}</p>
             </GlassCard>

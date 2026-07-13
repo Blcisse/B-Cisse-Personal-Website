@@ -196,6 +196,10 @@ a {
   animation: skills-marquee 28s linear infinite;
 }
 
+.hero-lang-ticker {
+  animation: skills-marquee 22s linear infinite;
+}
+
 .skill-module::before {
   content: "";
   position: absolute;
@@ -221,7 +225,8 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .skills-marquee {
+  .skills-marquee,
+  .hero-lang-ticker {
     animation: none;
     flex-wrap: wrap;
     width: auto;
@@ -484,6 +489,44 @@ a {
     flex-wrap: wrap;
     width: auto;
   }
+}
+
+.about-stat-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-stat-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(124, 247, 255, 0.08), transparent);
+  transform: translateX(-120%);
+  transition: transform 520ms ease;
+  pointer-events: none;
+}
+
+.about-stat-card:hover::after {
+  transform: translateX(120%);
+}
+
+.social-link-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(124, 247, 255, 0.08), transparent);
+  transform: translateX(-120%);
+  transition: transform 520ms ease;
+  pointer-events: none;
+}
+
+.social-link-card:hover::after {
+  transform: translateX(120%);
 }
 
 .contact-form-panel::before {

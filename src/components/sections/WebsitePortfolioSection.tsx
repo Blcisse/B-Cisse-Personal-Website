@@ -42,9 +42,15 @@ export function WebsitePortfolioSection() {
                   <span className="size-2 rounded-full bg-violet" />
                   <span className="size-2 rounded-full bg-neon" />
                 </div>
-                <div className="mt-3 aspect-video rounded-[1rem] border border-white/10 bg-[radial-gradient(circle_at_25%_20%,rgba(124,247,255,0.2),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.13),rgba(255,255,255,0.025))] p-5">
-                  <p className="technical-kicker">Desktop preview</p>
-                  <p className="mt-20 max-w-md text-3xl font-black text-white">{activeProject.name}</p>
+                <div className="mt-3 aspect-video overflow-hidden rounded-[1rem] border border-white/10 bg-ink/60">
+                  <video
+                    autoPlay
+                    className="h-full w-full object-cover"
+                    loop
+                    muted
+                    playsInline
+                    src={`/assets/videos/placeholder-website-${activeIndex + 1}.mp4`}
+                  />
                 </div>
               </div>
               <div className="mobile-frame absolute bottom-8 right-7 w-36 rounded-[1.8rem] border border-white/15 bg-ink/80 p-2 shadow-glow backdrop-blur md:w-44">

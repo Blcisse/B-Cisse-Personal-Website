@@ -28,7 +28,7 @@ export function HeroSection() {
   const ringY = useTransform(mouseY, [-0.5, 0.5], shouldReduceMotion ? [0, 0] : [-16, 16]);
 
   const handlePointerMove = (event: React.PointerEvent<HTMLElement>) => {
-    if (shouldReduceMotion) return;
+    if (shouldReduceMotion || event.pointerType !== "mouse") return;
     const rect = event.currentTarget.getBoundingClientRect();
     mouseX.set((event.clientX - rect.left) / rect.width - 0.5);
     mouseY.set((event.clientY - rect.top) / rect.height - 0.5);
@@ -38,12 +38,12 @@ export function HeroSection() {
     <section id="hero" className="section-shell relative overflow-hidden pt-20 lg:flex lg:min-h-screen lg:items-center lg:pt-32" onPointerMove={handlePointerMove}>
       <motion.div
         animate="visible"
-        className="relative grid w-full items-start gap-8 lg:min-h-[calc(100vh-9rem)] lg:grid-cols-3 lg:gap-10"
+        className="relative grid w-full grid-cols-1 items-start gap-8 lg:min-h-[calc(100vh-9rem)] lg:grid-cols-3 lg:gap-10"
         initial="hidden"
         transition={{ staggerChildren: shouldReduceMotion ? 0 : 0.1 }}
       >
-        <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-neon/15" style={{ x: ringX, y: ringY }} />
-        <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10" style={{ x: ringY, y: ringX }} />
+        <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-neon/15 lg:block" style={{ x: ringX, y: ringY }} />
+        <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 lg:block" style={{ x: ringY, y: ringX }} />
 
         <div className="order-3 z-10 text-center lg:order-1 lg:text-left">
           <motion.p className="technical-kicker" variants={reveal}>00.01 / B PRSNL Interface</motion.p>

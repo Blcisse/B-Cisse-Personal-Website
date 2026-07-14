@@ -35,14 +35,14 @@ export function WebsitePortfolioSection() {
       <Reveal delay={0.14}>
         <GlassCard className="website-showcase relative overflow-hidden p-0">
           <div className="grid gap-0 lg:grid-cols-[1.18fr_0.82fr]">
-            <div className="website-device-stage relative min-h-[28rem] overflow-hidden border-b border-white/10 p-5 lg:border-b-0 lg:border-r lg:border-white/10 md:p-8">
+            <div className="website-device-stage relative min-h-[34rem] overflow-hidden border-b border-white/10 p-5 lg:border-b-0 lg:border-r lg:border-white/10 md:p-8">
               <div className="desktop-frame mx-auto max-w-3xl rounded-[1.6rem] border border-white/15 bg-ink/70 p-3 shadow-glass">
                 <div className="flex gap-2 border-b border-white/10 px-2 pb-3">
                   <span className="size-2 rounded-full bg-ember" />
                   <span className="size-2 rounded-full bg-violet" />
                   <span className="size-2 rounded-full bg-neon" />
                 </div>
-                <div className="mt-3 aspect-video overflow-hidden rounded-[1rem] border border-white/10 bg-ink/60">
+                <div className="mt-3 aspect-[16/11] overflow-hidden rounded-[1rem] border border-white/10 bg-ink/60">
                   <video
                     autoPlay
                     className="h-full w-full object-cover"

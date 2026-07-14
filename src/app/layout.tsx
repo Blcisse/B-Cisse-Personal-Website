@@ -11,6 +11,9 @@ const siteDescription =
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ballacisse.com"),
+  icons: {
+    icon: "/images/Bdevlogo.png",
+  },
   title: {
     default: "B Cisse | Full-Stack Software Engineer",
     template: "%s | B Cisse",
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
     title: "B Cisse | Full-Stack Software Engineer",
     description: siteDescription,
     url: "https://ballacisse.com",
-    siteName: "B PRSNL Webby",
+    siteName: "B Personal Website",
     images: [{ url: "/images/b-cisse-portrait.svg", width: 700, height: 900, alt: "B Cisse portfolio portrait placeholder" }],
     locale: "en_US",
     type: "website",

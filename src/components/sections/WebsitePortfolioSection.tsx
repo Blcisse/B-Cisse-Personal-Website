@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import type { ProjectItem } from "@/data/projects";
 import { websiteProjects } from "@/data/projects";
@@ -54,12 +55,15 @@ export function WebsitePortfolioSection() {
                   />
                 </div>
               </div>
-              <div className="mobile-frame absolute bottom-8 right-7 w-36 rounded-[1.8rem] border border-white/15 bg-ink/80 p-2 shadow-glow backdrop-blur md:w-44">
-                <div className="aspect-[9/16] rounded-[1.3rem] border border-white/10 bg-[linear-gradient(160deg,rgba(124,247,255,0.16),rgba(155,124,255,0.08),rgba(255,107,74,0.12))] p-3">
-                  <p className="font-mono text-[0.58rem] uppercase tracking-[0.18em] text-neon">Mobile</p>
-                  <div className="mt-10 h-2 rounded-full bg-white/20" />
-                  <div className="mt-2 h-2 w-2/3 rounded-full bg-white/10" />
-                  <div className="mt-6 h-16 rounded-2xl border border-white/10 bg-white/10" />
+              <div className="mobile-frame absolute bottom-8 right-7 w-36 md:w-44">
+                <div className="relative aspect-[0.51] overflow-hidden rounded-xl shadow-glow">
+                  <Image
+                    alt={`${activeProject.name} mobile preview`}
+                    className="object-cover"
+                    fill
+                    key={activeProject.mobileImage}
+                    src={activeProject.mobileImage}
+                  />
                 </div>
               </div>
             </div>

@@ -12,7 +12,7 @@ const siteDescription =
 export const metadata: Metadata = {
   metadataBase: new URL("https://ballacisse.com"),
   icons: {
-    icon: "/images/Bdevlogo.png",
+    icon: "/images/bdevlogo.png",
   },
   title: {
     default: "B Cisse | Full-Stack Software Engineer",

@@ -37,7 +37,7 @@ export function Header() {
         <div className="flex items-center justify-between gap-4">
           <a aria-label="Back to top" className="group flex items-center gap-3 font-black text-white" href="#hero" onClick={closeMenu}>
             <span className="grid size-9 place-items-center overflow-hidden rounded-full border border-white/15 bg-white/10 shadow-glow transition group-hover:border-neon">
-              <Image alt="B Dev Logo" className="size-full object-contain" height={36} src="/images/Bdevlogo.png" width={36} />
+              <Image alt="B Dev Logo" className="size-full object-contain" height={36} src="/images/bdevlogo.png" width={36} />
             </span>
             <span className="font-black">B / B Cisse</span>
           </a>

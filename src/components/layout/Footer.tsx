@@ -7,7 +7,10 @@ export function Footer() {
     <footer className="relative z-10 px-5 pb-8 pt-10">
       <div className="mx-auto grid max-w-6xl gap-6 rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 text-sm text-white/55 backdrop-blur-xl md:grid-cols-[1.4fr_1fr] md:p-8">
         <div>
-          <Image alt="B Dev Logo" className="mb-3 h-10 w-auto" height={40} src="/images/Bdevlogo.png" width={40} />
+          <div className="mb-3 flex items-center gap-3">
+            <Image alt="B Dev Logo" className="h-14 w-14 rounded-xl object-contain" height={56} src="/images/bdevlogo.png" width={56} />
+            <span className="technical-kicker">B Personal Website</span>
+          </div>
           <p className="mt-3 text-2xl font-black text-white">{profile.name}</p>
           <p className="mt-1 text-white/65">{profile.title} · {profile.specialty}</p>
           <p className="mt-2 text-white/45">{profile.location}</p>

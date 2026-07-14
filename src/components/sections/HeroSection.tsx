@@ -59,7 +59,7 @@ export function HeroSection() {
         </div>
 
         <motion.div className="order-1 z-20 lg:order-2" style={{ x: imageX, y: imageY }} variants={reveal}>
-          <div className="hero-frame liquid-glass relative mx-auto aspect-[0.60] w-full max-w-[24rem] overflow-hidden rounded-t-[11rem] rounded-b-[3rem] p-3 shadow-glow sm:max-w-[30rem]">
+          <div className="hero-frame liquid-glass relative mx-auto aspect-[0.60] w-full max-w-[14rem] overflow-hidden rounded-t-[11rem] rounded-b-[3rem] p-3 shadow-glow sm:max-w-[30rem]">
             <div className="absolute inset-0 rounded-t-[10rem] rounded-b-[2.6rem] bg-[radial-gradient(circle_at_50%_12%,rgba(124,247,255,0.22),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,255,255,0.025))]" />
             <Image alt="Portrait of B Cisse" className="relative z-10 h-full w-full rounded-t-[9.4rem] rounded-b-[2.2rem] object-cover grayscale" height={900} priority src={profile.portrait} width={700} />
             <div className="pointer-events-none absolute inset-x-7 bottom-7 z-20 rounded-[1.6rem] border border-white/15 bg-ink/60 p-4 backdrop-blur-xl">

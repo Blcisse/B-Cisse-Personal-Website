@@ -10,8 +10,9 @@ export const siteConfig = {
     { label: "Contact", href: "#contact" },
   ],
   footerLinks: [
-    { label: "GitHub", href: "#" },
-    { label: "LinkedIn", href: "#" },
+    { label: "GitHub", href: "https://github.com/Blcisse?tab=repositories" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/ballacisse/" },
+    { label: "Portfolio", href: "https://ballacisse.com/" },
     { label: "Email", href: "mailto:bl.cisse22@gmail.com" },
   ],
 };

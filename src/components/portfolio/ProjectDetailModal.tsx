@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ExternalLink, Github, X } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import type { ProjectItem } from "@/data/projects";
 
@@ -49,9 +50,18 @@ export function ProjectDetailModal({ project, onClose }: { project: ProjectItem 
 
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="project-modal-gallery min-h-80 border-b border-white/10 p-5 lg:border-b-0 lg:border-r lg:border-white/10 md:p-7">
-                <div className="h-full min-h-72 rounded-[1.6rem] border border-white/10 bg-[radial-gradient(circle_at_25%_20%,rgba(124,247,255,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.13),rgba(255,255,255,0.025))] p-5">
-                  <p className="technical-kicker">{project.type} / visual placeholder</p>
-                  <p className="mt-24 max-w-md text-4xl font-black leading-tight text-white">{project.title}</p>
+                <div className="relative h-full min-h-72 overflow-hidden rounded-[1.6rem] border border-white/10 bg-ink/60">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent" />
+                  <div className="relative z-10 p-5">
+                    <p className="technical-kicker">{project.type} / project preview</p>
+                    <p className="mt-24 max-w-md text-4xl font-black leading-tight text-white">{project.title}</p>
+                  </div>
                 </div>
                 <div className="mt-4 grid grid-cols-3 gap-3">
                   {project.gallery.map((item) => <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-3 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-white/45" key={item}>{item}</div>)}
@@ -83,9 +93,20 @@ export function ProjectDetailModal({ project, onClose }: { project: ProjectItem 
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  {project.githubUrl ? <a className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 transition hover:border-neon hover:text-neon" href={project.githubUrl}><Github size={16} /> GitHub</a> : null}
-                  <a className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 transition hover:border-neon hover:text-neon" href={project.liveUrl}><ExternalLink size={16} /> Live / Demo</a>
-                  <a className="rounded-full bg-white px-4 py-2 text-sm font-black text-black" href={project.caseStudyUrl}>Case Study Placeholder</a>
+                  {project.clutchUrl ? (
+                    <a className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 transition hover:border-neon hover:text-neon" href={project.clutchUrl} rel="noopener noreferrer" target="_blank">
+                      <ExternalLink size={16} /> Verify on ClutchCo
+                    </a>
+                  ) : project.githubUrl ? (
+                    <a className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 transition hover:border-neon hover:text-neon" href={project.githubUrl} rel="noopener noreferrer" target="_blank">
+                      <Github size={16} /> GitHub
+                    </a>
+                  ) : null}
+                  {project.liveUrl && !project.liveUrl.startsWith("#") ? (
+                    <a className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 transition hover:border-neon hover:text-neon" href={project.liveUrl} rel="noopener noreferrer" target="_blank">
+                      <ExternalLink size={16} /> Live / Demo
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </div>

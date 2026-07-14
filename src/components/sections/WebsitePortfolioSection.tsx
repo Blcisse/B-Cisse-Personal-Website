@@ -46,10 +46,11 @@ export function WebsitePortfolioSection() {
                   <video
                     autoPlay
                     className="h-full w-full object-cover"
+                    key={activeProject.videoUrl}
                     loop
                     muted
                     playsInline
-                    src={`/assets/videos/placeholder-website-${activeIndex + 1}.mp4`}
+                    src={activeProject.videoUrl}
                   />
                 </div>
               </div>
@@ -85,7 +86,7 @@ export function WebsitePortfolioSection() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <button className="rounded-full bg-white px-4 py-2 text-sm font-black text-black" onClick={() => setSelectedProject(activeProject)} type="button">Case Study</button>
-                <a className="rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 hover:border-neon hover:text-neon" href={activeProject.liveUrl}>Live Placeholder</a>
+                <a className="rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 hover:border-neon hover:text-neon" href={activeProject.liveUrl} rel="noopener noreferrer" target="_blank">View Portfolio</a>
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-4">

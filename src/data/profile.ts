@@ -26,7 +26,7 @@ export const profile = {
   focusAreas: ["Full-Stack", "AI Systems", "Frontend", "Backend", "Data"],
   heroSystems: ["01 / Web systems", "02 / Backend APIs", "03 / AI workflows"],
   heroAccents: [
-    { label: "RAG / API / UI", style: { left: "-0.5rem", bottom: "12rem", color: "var(--ember)" } },
+    { label: "RAG / API / UI", style: { left: "-0.5rem", bottom: "24%", color: "var(--ember)" } },
   ],
   contactCopy:
     "Have a role, product, website, or intelligent system in mind? Let’s build something sharp, scalable, and useful.",

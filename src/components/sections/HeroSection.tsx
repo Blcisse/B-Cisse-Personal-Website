@@ -59,15 +59,16 @@ export function HeroSection() {
         </div>
 
         <motion.div className="order-1 z-20 lg:order-2" style={{ x: imageX, y: imageY }} variants={reveal}>
-          <div className="hero-frame liquid-glass relative mx-auto aspect-[0.60] w-full max-w-[14rem] overflow-hidden rounded-t-[11rem] rounded-b-[3rem] p-3 shadow-glow sm:max-w-[30rem]">
+          <div className="hero-frame liquid-glass relative mx-auto aspect-[0.60] w-full max-w-[9rem] overflow-hidden rounded-t-[11rem] rounded-b-[3rem] p-3 shadow-glow sm:max-w-[30rem]">
             <div className="absolute inset-0 rounded-t-[10rem] rounded-b-[2.6rem] bg-[radial-gradient(circle_at_50%_12%,rgba(124,247,255,0.22),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,255,255,0.025))]" />
             <Image alt="Portrait of B Cisse" className="relative z-10 h-full w-full rounded-t-[9.4rem] rounded-b-[2.2rem] object-cover grayscale" height={900} priority src={profile.portrait} width={700} />
-            <div className="pointer-events-none absolute inset-x-3 bottom-3 z-20 rounded-xl border border-white/15 bg-ink/60 p-2 backdrop-blur-xl sm:inset-x-7 sm:bottom-7 sm:rounded-[1.6rem] sm:p-4">
-              <p className="technical-kicker text-[0.5rem] tracking-[0.1em] sm:text-xs sm:tracking-[0.28em]">Visual anchor / engineer profile</p>
-              <p className="mt-1 text-xs font-black text-white sm:text-xl">Full-Stack • AI/Data • Systems</p>
+            <div className="pointer-events-none absolute inset-x-2 bottom-2 z-20 rounded-lg border border-white/15 bg-ink/60 p-1.5 backdrop-blur-xl sm:inset-x-7 sm:bottom-7 sm:rounded-[1.6rem] sm:p-4">
+              <p className="technical-kicker text-[0.35rem] tracking-[0.04em] sm:text-xs sm:tracking-[0.28em]">Visual anchor / engineer profile</p>
+              <p className="mt-0.5 text-[0.55rem] font-black leading-tight text-white sm:mt-1 sm:text-xl">Full-Stack Software Engineer</p>
+              <p className="mt-0.5 text-[0.45rem] font-semibold leading-tight text-neon sm:mt-1 sm:text-sm">Mobile App Development Specialist</p>
             </div>
             {profile.heroAccents.map((accent) => (
-              <span className="absolute z-20 rounded-full border border-white/15 bg-ink/70 px-2 py-1 font-mono text-[0.5rem] uppercase tracking-[0.08em] text-neon backdrop-blur sm:px-4 sm:py-2 sm:text-xs sm:tracking-[0.16em]" key={accent.label} style={accent.style}>
+              <span className="absolute z-20 rounded-full border border-white/15 bg-ink/70 px-1.5 py-0.5 font-mono text-[0.4rem] uppercase tracking-[0.03em] text-neon backdrop-blur sm:px-4 sm:py-2 sm:text-xs sm:tracking-[0.16em]" key={accent.label} style={accent.style}>
                 {accent.label}
               </span>
             ))}

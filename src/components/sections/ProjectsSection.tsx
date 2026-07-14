@@ -1,16 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import type { ProjectItem } from "@/data/projects";
 import { softwareProjects } from "@/data/projects";
 import { ProjectCard } from "@/components/portfolio/ProjectCard";
-import { ProjectDetailModal } from "@/components/portfolio/ProjectDetailModal";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export function ProjectsSection() {
-  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
-
   return (
     <section id="projects" className="section-shell relative">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
@@ -27,12 +22,10 @@ export function ProjectsSection() {
       <div className="mt-2 grid gap-5 xl:grid-cols-2">
         {softwareProjects.map((project, index) => (
           <Reveal delay={0.08 * index} key={project.id}>
-            <ProjectCard project={project} onViewDetails={setSelectedProject} />
+            <ProjectCard project={project} />
           </Reveal>
         ))}
       </div>
-
-      <ProjectDetailModal project={selectedProject} onClose={() => setSelectedProject(null)} />
     </section>
   );
 }

@@ -35,14 +35,14 @@ export function WebsitePortfolioSection() {
       <Reveal delay={0.14}>
         <GlassCard className="website-showcase relative overflow-hidden p-0">
           <div className="grid gap-0 lg:grid-cols-[1.18fr_0.82fr]">
-            <div className="website-device-stage relative min-h-[28rem] overflow-hidden border-b border-white/10 p-5 lg:border-b-0 lg:border-r lg:border-white/10 md:p-8">
+            <div className="website-device-stage relative min-h-[34rem] overflow-hidden border-b border-white/10 p-5 lg:border-b-0 lg:border-r lg:border-white/10 md:p-8">
               <div className="desktop-frame mx-auto max-w-3xl rounded-[1.6rem] border border-white/15 bg-ink/70 p-3 shadow-glass">
                 <div className="flex gap-2 border-b border-white/10 px-2 pb-3">
                   <span className="size-2 rounded-full bg-ember" />
                   <span className="size-2 rounded-full bg-violet" />
                   <span className="size-2 rounded-full bg-neon" />
                 </div>
-                <div className="mt-3 aspect-video overflow-hidden rounded-[1rem] border border-white/10 bg-ink/60">
+                <div className="mt-3 aspect-[16/11] overflow-hidden rounded-[1rem] border border-white/10 bg-ink/60">
                   <video
                     autoPlay
                     className="h-full w-full object-cover"
@@ -52,6 +52,14 @@ export function WebsitePortfolioSection() {
                     playsInline
                     src={activeProject.videoUrl}
                   />
+                </div>
+              </div>
+              <div className="mobile-frame absolute bottom-8 right-7 w-36 rounded-[1.8rem] border border-white/15 bg-ink/80 p-2 shadow-glow backdrop-blur md:w-44">
+                <div className="aspect-[9/16] rounded-[1.3rem] border border-white/10 bg-[linear-gradient(160deg,rgba(124,247,255,0.16),rgba(155,124,255,0.08),rgba(255,107,74,0.12))] p-3">
+                  <p className="font-mono text-[0.58rem] uppercase tracking-[0.18em] text-neon">Mobile</p>
+                  <div className="mt-10 h-2 rounded-full bg-white/20" />
+                  <div className="mt-2 h-2 w-2/3 rounded-full bg-white/10" />
+                  <div className="mt-6 h-16 rounded-2xl border border-white/10 bg-white/10" />
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { SoftwareProject } from "@/data/projects";
 import { GlassCard } from "@/components/ui/GlassCard";
 
-export function ProjectCard({ project, compact = false, onViewDetails }: { project: SoftwareProject; compact?: boolean; onViewDetails: (project: SoftwareProject) => void }) {
+export function ProjectCard({ project, compact = false }: { project: SoftwareProject; compact?: boolean; onViewDetails?: (project: SoftwareProject) => void }) {
   return (
     <GlassCard className="project-card group h-full overflow-hidden p-0">
       <div className={compact ? "project-demo relative h-56 overflow-hidden border-b border-white/10 bg-ink/60" : "project-demo relative min-h-80 overflow-hidden border-b border-white/10 bg-ink/60"}>
@@ -40,14 +40,10 @@ export function ProjectCard({ project, compact = false, onViewDetails }: { proje
           {project.stack.slice(0, compact ? 4 : project.stack.length).map((item) => <span className="rounded-full border border-white/10 bg-ink/45 px-3 py-1.5 text-sm text-white/68" key={item}>{item}</span>)}
         </div>
         <div className="project-actions mt-7 flex flex-wrap gap-3 opacity-100 transition md:opacity-0 md:group-hover:opacity-100">
-          <button className="rounded-full bg-white px-4 py-2 text-sm font-black text-black" onClick={() => onViewDetails(project)} type="button">View Details</button>
           {project.clutchUrl ? (
             <a className="rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 hover:border-neon hover:text-neon" href={project.clutchUrl} rel="noopener noreferrer" target="_blank">Verify on ClutchCo</a>
           ) : project.githubUrl ? (
             <a className="rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 hover:border-neon hover:text-neon" href={project.githubUrl} rel="noopener noreferrer" target="_blank">GitHub</a>
-          ) : null}
-          {!compact && project.liveUrl && project.liveUrl !== "#" ? (
-            <a className="rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 hover:border-neon hover:text-neon" href={project.liveUrl} rel="noopener noreferrer" target="_blank">Live / Demo</a>
           ) : null}
         </div>
       </div>

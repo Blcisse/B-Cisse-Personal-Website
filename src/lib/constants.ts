@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "B PRSNL Webby",
+  name: "B Personal Website",
   url: "https://ballacisse.com",
   navItems: [
     { label: "About", href: "#about" },

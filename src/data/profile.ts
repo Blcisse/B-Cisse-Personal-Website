@@ -26,7 +26,7 @@ export const profile = {
   focusAreas: ["Full-Stack", "AI Systems", "Frontend", "Backend", "Data"],
   heroSystems: ["01 / Intelligent Systems Engineering ", "02 / Backend APIs", "03 / Frontend Web & Mobile", "04 / Data Engineering"],
   heroAccents: [
-    { label: "API / CLOUD / UI", style: { right: "-0.5rem", bottom: "40%", color: "var(--ember)" } },
+    { label: "API / CLOUD / UI", style: { right: "-0.5rem", bottom: "37%", color: "var(--ember)" } },
   ],
   contactCopy:
     "Have a role, product, website, or intelligent system in mind? Let’s build something sharp, scalable, and useful.",

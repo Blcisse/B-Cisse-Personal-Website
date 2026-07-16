@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-6 rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 text-sm text-white/55 backdrop-blur-xl md:grid-cols-[1.4fr_1fr] md:p-8">
         <div>
           <div className="mb-3 flex items-center gap-3">
-            <Image alt="B Dev Logo" className="h-14 w-14 rounded-xl object-contain" height={56} src="/images/bdevlogo.png" width={56} />
+            <Image alt="B Dev Logo" className="h-[3.75rem] w-[3.75rem] rounded-xl object-contain" height={60} src="/images/bdevlogo.png" width={60} />
             <span className="technical-kicker">B Personal Website</span>
           </div>
           <p className="mt-3 text-2xl font-black text-white">{profile.name}</p>

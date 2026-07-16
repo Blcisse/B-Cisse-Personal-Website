@@ -13,9 +13,9 @@ const reveal = {
 };
 
 const langTicker = [
-  "Python", "JavaScript", "TypeScript", "SQL", "React", "Next.js",
-  "Node.js", "FastAPI", "Docker", "GCP", "Tailwind", "Framer Motion",
-  "PostgreSQL", "LangChain",
+  "Python", "JavaScript", "TypeScript", "HTML", "React", "Next.js",
+  "Node.js", "FastAPI", "Swift", "Kotlin", "AWS", "GCP",
+  "Tailwind", "PostgreSQL", "LangChain",
 ];
 
 export function HeroSection() {
@@ -63,7 +63,7 @@ export function HeroSection() {
             <div className="absolute inset-0 rounded-t-[10rem] rounded-b-[2.6rem] bg-[radial-gradient(circle_at_50%_12%,rgba(124,247,255,0.22),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,255,255,0.025))]" />
             <Image alt="Portrait of B Cisse" className="relative z-10 h-full w-full rounded-t-[9.4rem] rounded-b-[2.2rem] object-cover grayscale" height={900} priority src={profile.portrait} width={700} />
             <div className="pointer-events-none absolute inset-x-2 bottom-2 z-20 rounded-lg border border-white/15 bg-ink/60 p-1.5 backdrop-blur-xl sm:inset-x-7 sm:bottom-7 sm:rounded-[1.6rem] sm:p-4">
-              <p className="technical-kicker text-[0.35rem] tracking-[0.04em] sm:text-xs sm:tracking-[0.28em]">Visual anchor / engineer profile</p>
+              <p className="technical-kicker text-[0.35rem] tracking-[0.04em] sm:text-xs sm:tracking-[0.28em]">Engineering profile</p>
               <p className="mt-0.5 text-[0.55rem] font-black leading-tight text-white sm:mt-1 sm:text-xl">Full-Stack Software Engineer</p>
               <p className="mt-0.5 text-[0.45rem] font-semibold leading-tight text-neon sm:mt-1 sm:text-sm">Mobile App Development Specialist</p>
             </div>

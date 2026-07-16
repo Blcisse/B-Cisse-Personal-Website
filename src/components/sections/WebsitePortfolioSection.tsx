@@ -43,7 +43,7 @@ export function WebsitePortfolioSection() {
                   <span className="size-2 rounded-full bg-violet" />
                   <span className="size-2 rounded-full bg-neon" />
                 </div>
-                <div className="mt-3 aspect-[16/11] overflow-hidden rounded-[1rem] border border-white/10 bg-ink/60">
+                <div className="mt-3 aspect-[16/10] overflow-hidden rounded-[1rem] border border-white/10 bg-ink/60">
                   <video
                     autoPlay
                     className="h-full w-full object-cover"
@@ -65,6 +65,14 @@ export function WebsitePortfolioSection() {
                     src={activeProject.mobileImage}
                   />
                 </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between gap-4 border-b border-white/10 p-4 lg:hidden">
+              <div className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">{activeIndex + 1} / {websiteProjects.length}</div>
+              <div className="flex gap-2">
+                <button aria-label="Previous website project" className="grid size-10 place-items-center rounded-full border border-white/15 text-white transition hover:border-neon hover:text-neon" onClick={() => move(-1)} type="button"><ArrowLeft size={16} /></button>
+                <button aria-label="Next website project" className="grid size-10 place-items-center rounded-full border border-white/15 text-white transition hover:border-neon hover:text-neon" onClick={() => move(1)} type="button"><ArrowRight size={16} /></button>
               </div>
             </div>
 
@@ -93,7 +101,7 @@ export function WebsitePortfolioSection() {
                 <a className="rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/75 hover:border-neon hover:text-neon" href={activeProject.liveUrl} rel="noopener noreferrer" target="_blank">View Portfolio</a>
               </div>
 
-              <div className="mt-8 flex items-center justify-between gap-4">
+              <div className="mt-8 hidden items-center justify-between gap-4 lg:flex">
                 <div className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">{activeIndex + 1} / {websiteProjects.length}</div>
                 <div className="flex gap-2">
                   <button aria-label="Previous website project" className="grid size-10 place-items-center rounded-full border border-white/15 text-white transition hover:border-neon hover:text-neon" onClick={() => move(-1)} type="button"><ArrowLeft size={16} /></button>

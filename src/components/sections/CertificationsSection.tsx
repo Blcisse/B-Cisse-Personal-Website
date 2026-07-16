@@ -13,7 +13,7 @@ export function CertificationsSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="open-copy lg:pb-12">
-            Credentials and recognition that support B’s full-stack engineering profile with cloud/data learning, analytics fluency, and Apple-recognized technical precision.
+            Credentials and recognition that support my full-stack engineering profile with cloud/data learning, analytics fluency, and Apple-recognized technical precision.
           </p>
         </Reveal>
       </div>

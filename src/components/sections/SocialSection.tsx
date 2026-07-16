@@ -8,7 +8,7 @@ export function SocialSection() {
     <section id="social" className="section-shell relative overflow-hidden">
       <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
         <Reveal>
-          <SectionLabel index="08" label="Follow" title="Follow B across code, career, portfolio, and direct contact channels." />
+          <SectionLabel index="08" label="Follow" title="Follow me across code, career, portfolio, and direct contact channels." />
         </Reveal>
         <Reveal delay={0.1}>
           <p className="open-copy lg:pb-12">

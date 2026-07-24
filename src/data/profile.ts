@@ -35,6 +35,6 @@ export const profile = {
     { label: "Phone", href: "tel:+16468369579", value: "(646) 836-9579" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/ballacisse/", value: "linkedin.com/in/ballacisse" },
     { label: "GitHub", href: "https://github.com/Blcisse?tab=repositories", value: "github.com/Blcisse" },
-    { label: "Website", href: "https://ballacisse.com/", value: "ballacisse.com" },
+    { label: "Portfolio", href: "https://ballacisse.com/", value: "ballacisse.com" },
   ],
 };

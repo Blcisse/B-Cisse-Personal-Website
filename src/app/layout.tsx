@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "B Cisse | Full-Stack Software Engineer",
     description: siteDescription,
     url: "https://ballacisse.com",
-    siteName: "B Personal Website",
+    siteName: "B PRSNL Webby",
     images: [{ url: "/images/b-cisse-portrait.svg", width: 700, height: 900, alt: "B Cisse portfolio portrait placeholder" }],
     locale: "en_US",
     type: "website",

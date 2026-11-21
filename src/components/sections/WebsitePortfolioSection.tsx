@@ -43,7 +43,7 @@ export function WebsitePortfolioSection() {
                   <span className="size-2 rounded-full bg-violet" />
                   <span className="size-2 rounded-full bg-neon" />
                 </div>
-                <div className="mt-3 aspect-[16/10] overflow-hidden rounded-[1rem] border border-white/10 bg-ink/60">
+                <div className="mt-3 aspect-[16/11] overflow-hidden rounded-[1rem] border border-white/10 bg-ink/60">
                   <video
                     autoPlay
                     className="h-full w-full object-cover"

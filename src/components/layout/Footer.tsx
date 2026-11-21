@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <div className="mb-3 flex items-center gap-3">
             <Image alt="B Dev Logo" className="h-[3.75rem] w-[3.75rem] rounded-xl object-contain" height={60} src="/images/bdevlogo.png" width={60} />
-            <span className="technical-kicker">B Personal Website</span>
+            <span className="technical-kicker">B PRSNL Webby</span>
           </div>
           <p className="mt-3 text-2xl font-black text-white">{profile.name}</p>
           <p className="mt-1 text-white/65">{profile.title} · {profile.specialty}</p>

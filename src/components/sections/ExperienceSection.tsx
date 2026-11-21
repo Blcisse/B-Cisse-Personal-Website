@@ -75,7 +75,7 @@ export function ExperienceSection() {
               >
                 <div className="flex flex-wrap items-start justify-between gap-4 border-b border-white/10 pb-6">
                   <div>
-                    <p className="technical-kicker">{activeExperience.index} / Active role</p>
+                    <p className="technical-kicker">{activeExperience.index} / Previous Role</p>
                     <h3 className="mt-3 text-3xl font-black text-white md:text-5xl">{activeExperience.company}</h3>
                     <p className="mt-3 text-xl text-neon">{activeExperience.role}</p>
                   </div>

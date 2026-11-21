@@ -36,8 +36,8 @@ export function Header() {
       <nav className="mx-auto max-w-6xl rounded-[2rem] border border-white/15 bg-ink/45 px-4 py-3 text-sm text-white/72 shadow-glass backdrop-blur-2xl supports-[backdrop-filter]:bg-ink/35 md:rounded-full md:px-5">
         <div className="flex items-center justify-between gap-4">
           <a aria-label="Back to top" className="group flex items-center gap-3 font-black text-white" href="#hero" onClick={closeMenu}>
-            <span className="grid size-9 place-items-center overflow-hidden rounded-full border border-white/15 bg-white/10 shadow-glow transition group-hover:border-neon">
-              <Image alt="B Dev Logo" className="size-full object-contain" height={36} src="/images/Bdevlogo.png" width={36} />
+            <span className="grid size-10 place-items-center overflow-hidden rounded-xl border border-white/15 bg-white/10 shadow-glow transition group-hover:border-neon">
+              <Image alt="B Dev Logo" className="size-full object-contain" height={40} src="/images/bdevlogo.png" width={40} />
             </span>
             <span className="font-black">B / B Cisse</span>
           </a>

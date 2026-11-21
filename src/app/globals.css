@@ -186,12 +186,6 @@ a {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
 }
 
-@media (max-width: 640px) {
-  .hero-frame span {
-    display: none;
-  }
-}
-
 .skills-marquee {
   animation: skills-marquee 28s linear infinite;
 }

@@ -19,7 +19,7 @@ export function SkillsSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="open-copy lg:pb-12">
-            B’s stack spans polished frontend interfaces, dependable backend services, cloud/data workflows, and AI systems—organized as technical modules instead of a flat resume list.
+            My stack spans polished frontend interfaces, dependable backend services, cloud/data workflows, and AI systems—organized as technical modules instead of a flat resume list.
           </p>
         </Reveal>
       </div>

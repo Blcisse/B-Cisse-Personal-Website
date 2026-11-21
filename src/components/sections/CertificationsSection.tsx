@@ -13,7 +13,7 @@ export function CertificationsSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="open-copy lg:pb-12">
-            Credentials and recognition that support B’s full-stack engineering profile with cloud/data learning, analytics fluency, and Apple-recognized technical precision.
+            Credentials and recognition that support my full-stack engineering profile with cloud/data learning, analytics fluency, and Apple-recognized technical precision.
           </p>
         </Reveal>
       </div>
@@ -59,8 +59,16 @@ export function CertificationsSection() {
                   src={award.image}
                   alt={`${award.title} badge`}
                   fill
-                  className="object-cover"
+                  className={award.mobileImage ? "hidden object-cover sm:block" : "object-cover"}
                 />
+                {award.mobileImage ? (
+                  <Image
+                    src={award.mobileImage}
+                    alt={`${award.title} badge`}
+                    fill
+                    className="object-cover sm:hidden"
+                  />
+                ) : null}
                 <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-ink/55 px-3 py-1 font-mono text-xs uppercase tracking-[0.2em] text-ember backdrop-blur">Award</div>
               </div>
               <div className="self-center">

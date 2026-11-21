@@ -33,6 +33,7 @@ export type WebsiteProject = BaseProject & {
   services: string[];
   detailUrl: string;
   videoUrl: string;
+  mobileImage: string;
   featured?: boolean;
 };
 
@@ -148,6 +149,7 @@ export const websiteProjects: WebsiteProject[] = [
     caseStudyUrl: "#case-forgeline",
     detailUrl: "#case-forgeline",
     videoUrl: "https://video.wixstatic.com/video/21b47c_f7e64862b68444c78c266e4946aa2185/1080p/mp4/file.mp4",
+    mobileImage: "/images/construction1mobile.png",
     featured: true,
   },
   {
@@ -171,6 +173,7 @@ export const websiteProjects: WebsiteProject[] = [
     caseStudyUrl: "#case-hometown-builders",
     detailUrl: "#case-hometown-builders",
     videoUrl: "https://video.wixstatic.com/video/21b47c_07fd17c5d546485eb13673818222c201/1080p/mp4/file.mp4",
+    mobileImage: "/images/construction2mobile.png",
   },
   {
     id: "steven-lorant-real-estate",
@@ -193,6 +196,7 @@ export const websiteProjects: WebsiteProject[] = [
     caseStudyUrl: "#case-steven-lorant",
     detailUrl: "#case-steven-lorant",
     videoUrl: "https://video.wixstatic.com/video/21b47c_f8c24f604d9a4d18b936dcdcc4ef1c43/1080p/mp4/file.mp4",
+    mobileImage: "/images/realestatemobile.png",
     featured: true,
   },
   {
@@ -216,6 +220,7 @@ export const websiteProjects: WebsiteProject[] = [
     caseStudyUrl: "#case-brightview-dental",
     detailUrl: "#case-brightview-dental",
     videoUrl: "https://video.wixstatic.com/video/21b47c_535a34677ed84b44a8bf549e8dd969aa/1080p/mp4/file.mp4",
+    mobileImage: "/images/dentalmobile.png",
   },
   {
     id: "russo-weston-law",
@@ -238,5 +243,6 @@ export const websiteProjects: WebsiteProject[] = [
     caseStudyUrl: "#case-russo-weston",
     detailUrl: "#case-russo-weston",
     videoUrl: "https://video.wixstatic.com/video/21b47c_053fe21854e041d0a9964d418819c28a/1080p/mp4/file.mp4",
+    mobileImage: "/images/lawyermobile.png",
   },
 ];

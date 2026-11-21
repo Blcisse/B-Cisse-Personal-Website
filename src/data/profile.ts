@@ -3,7 +3,7 @@ export const profile = {
   displayName: "B Cisse",
   alias: "B",
   title: "Full-Stack Software Engineer",
-  specialty: "Data & Intelligent Systems Engineering Specialist",
+  specialty: "AI/ML Engineering & Intelligent Automation Specialist",
   location: "New York, NY",
   email: "bl.cisse22@gmail.com",
   phone: "(646) 836-9579",

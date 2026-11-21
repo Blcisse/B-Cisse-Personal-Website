@@ -89,10 +89,8 @@ export function WelcomeLoader() {
                 {bootSteps[stepIndex]}
               </motion.p>
             </AnimatePresence>
-            <div className="mt-6 grid grid-cols-3 gap-2 text-left font-mono text-[0.65rem] uppercase tracking-[0.18em] text-white/35">
-              <span>AI/Data</span>
-              <span>Full-stack</span>
-              <span>Frontend</span>
+            <div className="mt-6 text-left font-mono text-[0.65rem] uppercase tracking-[0.18em] text-white/35">
+              <span>Full-Stack Software Engineer</span>
             </div>
           </motion.div>
         </motion.div>

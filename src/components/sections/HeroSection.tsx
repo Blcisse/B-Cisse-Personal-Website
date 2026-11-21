@@ -13,9 +13,9 @@ const reveal = {
 };
 
 const langTicker = [
-  "Python", "JavaScript", "TypeScript", "SQL", "React", "Next.js",
-  "Node.js", "FastAPI", "Docker", "GCP", "Tailwind", "Framer Motion",
-  "PostgreSQL", "LangChain",
+  "Python", "JavaScript", "TypeScript", "HTML", "React", "Next.js",
+  "Node.js", "FastAPI", "Swift", "Kotlin", "AWS", "GCP",
+  "Tailwind", "PostgreSQL", "LangChain",
 ];
 
 export function HeroSection() {
@@ -28,7 +28,7 @@ export function HeroSection() {
   const ringY = useTransform(mouseY, [-0.5, 0.5], shouldReduceMotion ? [0, 0] : [-16, 16]);
 
   const handlePointerMove = (event: React.PointerEvent<HTMLElement>) => {
-    if (shouldReduceMotion) return;
+    if (shouldReduceMotion || event.pointerType !== "mouse") return;
     const rect = event.currentTarget.getBoundingClientRect();
     mouseX.set((event.clientX - rect.left) / rect.width - 0.5);
     mouseY.set((event.clientY - rect.top) / rect.height - 0.5);
@@ -38,12 +38,12 @@ export function HeroSection() {
     <section id="hero" className="section-shell relative overflow-hidden pt-20 lg:flex lg:min-h-screen lg:items-center lg:pt-32" onPointerMove={handlePointerMove}>
       <motion.div
         animate="visible"
-        className="relative grid w-full items-start gap-8 lg:min-h-[calc(100vh-9rem)] lg:grid-cols-3 lg:gap-10"
+        className="relative grid w-full grid-cols-1 items-start gap-8 lg:min-h-[calc(100vh-9rem)] lg:grid-cols-3 lg:gap-10"
         initial="hidden"
         transition={{ staggerChildren: shouldReduceMotion ? 0 : 0.1 }}
       >
-        <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-neon/15" style={{ x: ringX, y: ringY }} />
-        <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10" style={{ x: ringY, y: ringX }} />
+        <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-neon/15 lg:block" style={{ x: ringX, y: ringY }} />
+        <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 lg:block" style={{ x: ringY, y: ringX }} />
 
         <div className="order-3 z-10 text-center lg:order-1 lg:text-left">
           <motion.p className="technical-kicker" variants={reveal}>00.01 / B PRSNL Interface</motion.p>
@@ -59,15 +59,16 @@ export function HeroSection() {
         </div>
 
         <motion.div className="order-1 z-20 lg:order-2" style={{ x: imageX, y: imageY }} variants={reveal}>
-          <div className="hero-frame liquid-glass relative mx-auto aspect-[0.60] w-full max-w-[24rem] overflow-hidden rounded-t-[11rem] rounded-b-[3rem] p-3 shadow-glow sm:max-w-[30rem]">
+          <div className="hero-frame liquid-glass relative mx-auto aspect-[0.60] w-full max-w-[9rem] overflow-hidden rounded-t-[11rem] rounded-b-[3rem] p-3 shadow-glow sm:max-w-[30rem]">
             <div className="absolute inset-0 rounded-t-[10rem] rounded-b-[2.6rem] bg-[radial-gradient(circle_at_50%_12%,rgba(124,247,255,0.22),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,255,255,0.025))]" />
             <Image alt="Portrait of B Cisse" className="relative z-10 h-full w-full rounded-t-[9.4rem] rounded-b-[2.2rem] object-cover grayscale" height={900} priority src={profile.portrait} width={700} />
-            <div className="pointer-events-none absolute inset-x-7 bottom-7 z-20 rounded-[1.6rem] border border-white/15 bg-ink/60 p-4 backdrop-blur-xl">
-              <p className="technical-kicker">Visual anchor / engineer profile</p>
-              <p className="mt-1 text-xl font-black text-white">Full-Stack • AI/Data • Systems</p>
+            <div className="pointer-events-none absolute inset-x-2 bottom-2 z-20 rounded-lg border border-white/15 bg-ink/60 p-1.5 backdrop-blur-xl sm:inset-x-7 sm:bottom-7 sm:rounded-[1.6rem] sm:p-4">
+              <p className="technical-kicker text-[0.35rem] tracking-[0.04em] sm:text-xs sm:tracking-[0.28em]">Engineering profile</p>
+              <p className="mt-0.5 text-[0.55rem] font-black leading-tight text-white sm:mt-1 sm:text-xl">Full-Stack Software Engineer</p>
+              <p className="mt-0.5 text-[0.45rem] font-semibold leading-tight text-neon sm:mt-1 sm:text-sm">Mobile App Development Specialist</p>
             </div>
             {profile.heroAccents.map((accent) => (
-              <span className="absolute z-20 rounded-full border border-white/15 bg-ink/70 px-4 py-2 font-mono text-xs uppercase tracking-[0.16em] text-neon backdrop-blur" key={accent.label} style={accent.style}>
+              <span className="absolute z-20 rounded-full border border-white/15 bg-ink/70 px-1.5 py-0.5 font-mono text-[0.4rem] uppercase tracking-[0.03em] text-neon backdrop-blur sm:px-4 sm:py-2 sm:text-xs sm:tracking-[0.16em]" key={accent.label} style={accent.style}>
                 {accent.label}
               </span>
             ))}

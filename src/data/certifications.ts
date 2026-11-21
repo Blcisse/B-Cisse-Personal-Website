@@ -16,6 +16,7 @@ export type Award = {
   verificationUrl: string;
   description: string;
   image: string;
+  mobileImage?: string;
 };
 
 export const certifications: Credential[] = [
@@ -58,5 +59,6 @@ export const awards: Award[] = [
     description:
       "Recognized by Apple’s Senior and District Managers for exceptional leadership and technical precision in customer engagement and solution delivery.",
     image: "/images/applelogo.jpg",
+    mobileImage: "/images/applelogomobile.png",
   },
 ];

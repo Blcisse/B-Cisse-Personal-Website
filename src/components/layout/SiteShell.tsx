@@ -1,6 +1,7 @@
 import type React from "react";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ScrollToTopButton } from "@/components/ui/ScrollToTopButton";
 
 export function SiteShell({ children }: React.PropsWithChildren) {
   return (
@@ -9,6 +10,7 @@ export function SiteShell({ children }: React.PropsWithChildren) {
       <Header />
       <main className="relative z-10" id="main-content">{children}</main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

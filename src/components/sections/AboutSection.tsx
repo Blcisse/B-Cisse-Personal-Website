@@ -23,7 +23,7 @@ export function AboutSection() {
             <div className="mt-8 space-y-5 border-l border-neon/35 pl-6 text-lg leading-8 text-white/70 md:text-xl md:leading-9">
               <p>{profile.executiveSummary}</p>
               <p>
-                The site positions B as a builder who can bridge polished interfaces, dependable backend systems, data-ready architecture, and applied AI workflows into products recruiters and clients can understand quickly.
+                This site positions me as a builder who can bridge polished interfaces, dependable backend systems, data-ready architecture, and applied AI workflows into products recruiters and clients can understand quickly.
               </p>
             </div>
           </Reveal>

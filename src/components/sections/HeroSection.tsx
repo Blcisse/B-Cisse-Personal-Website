@@ -46,7 +46,7 @@ export function HeroSection() {
         <motion.div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 lg:block" style={{ x: ringY, y: ringX }} />
 
         <div className="order-3 z-10 text-center lg:order-1 lg:text-left">
-          <motion.p className="technical-kicker" variants={reveal}>00.01 / B PRSNL Interface</motion.p>
+          <motion.p className="technical-kicker" variants={reveal}>00.01 / B PRSNL WEB - Interface</motion.p>
           <motion.h1 className="mt-4 text-5xl font-black leading-[0.88] tracking-tight text-white sm:text-6xl lg:text-7xl" variants={reveal}>
             {profile.name}
             <span className="mt-3 block text-2xl font-semibold tracking-normal text-white/45 sm:text-3xl">({profile.displayName})</span>
@@ -65,7 +65,7 @@ export function HeroSection() {
             <div className="pointer-events-none absolute inset-x-2 bottom-2 z-20 rounded-lg border border-white/15 bg-ink/60 p-1.5 backdrop-blur-xl sm:inset-x-7 sm:bottom-7 sm:rounded-[1.6rem] sm:p-4">
               <p className="technical-kicker text-[0.35rem] tracking-[0.04em] sm:text-xs sm:tracking-[0.28em]">Engineering profile</p>
               <p className="mt-0.5 text-[0.55rem] font-black leading-tight text-white sm:mt-1 sm:text-xl">Full-Stack Software Engineer</p>
-              <p className="mt-0.5 text-[0.45rem] font-semibold leading-tight text-neon sm:mt-1 sm:text-sm">Mobile App Development Specialist</p>
+              <p className="mt-0.5 text-[0.45rem] font-semibold leading-tight text-neon sm:mt-1 sm:text-sm">AI/ML Engineering & Intelligent Automation Specialist</p>
             </div>
             {profile.heroAccents.map((accent) => (
               <span className="absolute z-20 rounded-full border border-white/15 bg-ink/70 px-1.5 py-0.5 font-mono text-[0.4rem] uppercase tracking-[0.03em] text-neon backdrop-blur sm:px-4 sm:py-2 sm:text-xs sm:tracking-[0.16em]" key={accent.label} style={accent.style}>

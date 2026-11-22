@@ -39,7 +39,7 @@ export function Header() {
             <span className="grid size-10 place-items-center overflow-hidden rounded-xl border border-white/15 bg-white/10 shadow-glow transition group-hover:border-neon">
               <Image alt="B Dev Logo" className="size-full object-contain" height={40} src="/images/bdevlogo.png" width={40} />
             </span>
-            <span className="font-black">B / B Cisse</span>
+            <span className="font-black">B Cisse</span>
           </a>
 
           <div className="hidden items-center gap-1.5 md:flex">

@@ -19,7 +19,7 @@ export function Footer() {
           <div className="flex flex-wrap gap-3 md:justify-end">
             {siteConfig.footerLinks.map((link) => <a className="rounded-full border border-white/10 px-4 py-2 transition hover:border-neon hover:text-neon" href={link.href} key={link.label}>{link.label}</a>)}
           </div>
-          <p className="text-white/35">© 2026 {profile.displayName}. All Rights Reserved.</p>
+          <p className="text-white/35">© 2026 B Cisse Personal Website. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
